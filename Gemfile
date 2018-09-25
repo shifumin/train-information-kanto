@@ -5,4 +5,5 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# add gems
+gem 'slack-ruby-client'
+gem 'train_info_kanto', github: 'shifumin/train_info_kanto'

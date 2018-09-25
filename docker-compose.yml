@@ -1,12 +1,15 @@
 version: '3'
 services:
   ruby:
-    build: .
-    tty: true
+    build:
+      context: .
     stdin_open: true
+    tty: true
+    environment:
+      - SLACK_API_TOKEN
     volumes:
       - .:/app
-      - bundle-data:/usr/local/bundle
+      - bundle_data:/usr/local/bundle
 volumes:
-  bundle-data:
+  bundle_data:
     driver: local
