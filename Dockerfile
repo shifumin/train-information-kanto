@@ -6,8 +6,9 @@ ENV APP_ROOT /app
 RUN mkdir -p $APP_ROOT
 WORKDIR $APP_ROOT
 
-COPY ./Gemfile      ./Gemfile
-COPY ./Gemfile.lock ./Gemfile.lock
+RUN gem install bundler
+COPY Gemfile      Gemfile
+COPY Gemfile.lock Gemfile.lock
 
 RUN bundle install
 
