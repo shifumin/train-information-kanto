@@ -1,8 +1,8 @@
 GIT
-  remote: https://github.com/shifumin/train_information.git
-  revision: 12213a3214fa937693ea5d13297cd5220abd06f2
+  remote: https://github.com/shifumin/train_info_kanto.git
+  revision: 0e60e8e55cee4b6b4f32185e5a297ac498948aae
   specs:
-    train_information (0.1.0)
+    train_info_kanto (0.1.0)
       nokogiri
 
 GEM
@@ -14,7 +14,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     concurrent-ruby (1.0.5)
-    faraday (0.15.2)
+    faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
@@ -46,10 +46,10 @@ PLATFORMS
 
 DEPENDENCIES
   slack-ruby-client
-  train_information!
+  train_info_kanto!
 
 RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.5
