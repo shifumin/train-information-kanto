@@ -7,7 +7,7 @@ Slack.configure do |config|
   config.token = ENV['SLACK_API_TOKEN']
 end
 
-texts = TrainInfoKanto.get(%w[山手線 京浜東北線 中央線 中央総武線 総武快速線 内房線 京葉線 千代田線])
+texts = TrainInfoKanto.get(%w[山手線 京浜東北線 横須賀線 中央線 中央総武線 総武快速線 内房線 京葉線 銀座線 千代田線])
 client = Slack::Web::Client.new
 
 texts.each do |text|
