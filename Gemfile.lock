@@ -18,18 +18,20 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multipart-post (2.0.0)
-    nokogiri (1.8.4)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    slack-ruby-client (0.13.0)
+    slack-ruby-client (0.13.1)
       activesupport
       faraday (>= 0.9)
       faraday_middleware
       gli
       hashie
       websocket-driver
+    thor (0.20.0)
     thread_safe (0.3.6)
-    train_info_kanto (0.1.3)
-      nokogiri
+    traininfo_kanto (0.2.0)
+      nokogiri (~> 1.8)
+      thor
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     websocket-driver (0.7.0)
@@ -41,7 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   slack-ruby-client
-  train_info_kanto
+  traininfo_kanto
 
 RUBY VERSION
    ruby 2.5.1p57
