@@ -1,15 +1,21 @@
-FROM ruby:2.5.1
+FROM ruby:2.6.2-alpine
 
 ENV LANG C.UTF-8
-ENV APP_ROOT /app
 
-RUN mkdir -p $APP_ROOT
-WORKDIR $APP_ROOT
+RUN mkdir /app
+WORKDIR /app
 
-RUN gem install bundler
-COPY Gemfile      Gemfile
+RUN apk update && \
+    apk upgrade && \
+    apk add --update --no-cache \
+        ruby-dev \
+        build-base
+
+RUN gem install bundler --no-document && \
+    gem update --system
+
+COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
-
-RUN bundle install
+RUN bundle install --jobs=4 --no-cache
 
 COPY . .
